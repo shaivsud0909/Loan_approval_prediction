@@ -19,6 +19,12 @@ model = joblib.load(model_path)
 explainer = shap.Explainer(model.named_steps["classifier"])
 
 
+
+
+
+
+
+
 # ---------------- PREDICTION SERVICE ---------------- #
 
 def prediction(features: LoanInput):
@@ -72,3 +78,14 @@ def prediction(features: LoanInput):
     }
 
     return result
+
+
+def home():
+    return {
+        "service": "Loan Prediction Service",
+        "status": "running",
+        "version": "1.0",
+        "available_routes": [
+            "/predict"
+        ]
+    }
