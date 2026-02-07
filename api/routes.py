@@ -6,5 +6,5 @@ router=APIRouter()
 
 router.get("/")(home)
 router.post("/prediction")(prediction)
-router.get("/welcome")(home)
+router.get("/welcome")(prediction)
 
