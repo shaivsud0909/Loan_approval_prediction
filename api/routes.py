@@ -6,6 +6,10 @@ router=APIRouter()
 
 router.get("/")(home)
 router.post("/prediction")(prediction)
-router.get("/welcome")(lambda: {"message": "Welcome to the Loan Approval Prediction API!"})
+router.get("/welcome")(lambda: {
+    "message": "Welcome from Shaiv 🚀",
+    "version": "1.0"
+})
+
 
 
